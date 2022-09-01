@@ -81,3 +81,30 @@ function getGrade(s1, s2, s3) {
 
 //completed
 //////////////////////////////////////////////////////
+
+//Complete the solution so that it splits the string into pairs of two characters.
+// If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+//Examples:
+//* 'abc' =>  ['ab', 'c_']
+//* 'abcdef' => ['ab', 'cd', 'ef']
+
+function solution(str) {
+    let evenStrs = [];
+    let splitterStr = str.split("");
+    let counter = 0;
+    splitterStr.forEach(str => {
+        counter++;
+        if (counter % 2 === 0) {
+            evenStrs.push(splitterStr[counter - 2] + str)
+        }
+    });
+
+    if (splitterStr.length % 2 !== 0) {
+        evenStrs.push(splitterStr[splitterStr.length - 1] + '_');
+    }
+    return evenStrs;
+}
+
+//note: im proud, because i got leveled from 8kyu on 6kyu :D
+//completed
+//////////////////////////////////////////////////////
