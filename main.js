@@ -114,5 +114,22 @@ function solution(str) {
 //Input: 123456789 Output: 987654321
 
 function descendingOrder(n) {
-    //...
+    const str = n.toString().split("");
+    const numbers = str.map(Number);
+    let modifier = numbers.sort().reverse();
+    let str2 = modifier.map(String);
+    let result = '';
+    str2.forEach(element => {
+        result += element;
+    });
+    return parseInt(result);
 }
+
+//completed
+//note: thats how one of seniors solve it
+
+function descendingOrder(n) {
+    return parseInt(String(n).split('').sort().reverse().join(''))
+}
+
+// lol
