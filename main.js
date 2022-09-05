@@ -131,5 +131,20 @@ function descendingOrder(n) {
 function descendingOrder(n) {
     return parseInt(String(n).split('').sort().reverse().join(''))
 }
-
 // lol
+
+//In this little assignment you are given a string of space separated numbers, and have to return
+// the highest and lowest number.
+//Examples
+//highAndLow("1 2 3 4 5");  // return "5 1"
+//highAndLow("1 2 -3 4 5"); // return "5 -3"
+//highAndLow("1 9 3 4 -5"); // return "9 -5"
+
+//function when user input is separated by commoa (1,1233,-10, 213 etc);
+function highAndLowCommoa(...numbers) {
+    const negatives = numbers.filter(n => n < 0);
+    const positives = numbers.filter(n => n >= 0);
+    return (` ${(Math.max(...positives))} ${Math.min(...negatives)}`);
+}
+
+//completed 
