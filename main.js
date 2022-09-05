@@ -144,7 +144,22 @@ function descendingOrder(n) {
 function highAndLowCommoa(...numbers) {
     const negatives = numbers.filter(n => n < 0);
     const positives = numbers.filter(n => n >= 0);
-    return (` ${(Math.max(...positives))} ${Math.min(...negatives)}`);
+    return (`${(Math.max(...positives))} ${Math.min(...negatives)}`);
 }
-
 //completed 
+
+//function when user input is in 1 string like this: ("12 5 11 4555 11");
+function highAndLow(numbers) {
+    const splitted = numbers.split(" ");
+    const numInts = splitted.map(Number);
+    const negatives = numInts.filter(n => n < 0);
+    const positives = numInts.filter(n => n >= 0);
+    if (negatives.length === 0) {
+        return (`${(Math.max(...positives))} ${Math.min(...positives)}`);
+    } else if (negatives.length > 0 && positives.length > 0) {
+        return (`${(Math.max(...positives))} ${Math.min(...negatives)}`);
+    } else if (positives.length === 0) {
+        return (`${(Math.max(...negatives))} ${Math.min(...negatives)}`);
+    }
+}
+//completed
