@@ -247,6 +247,7 @@ function race(v1, v2, g) {
 
 }
 
+//areYouPlayingBanjo
 
 //Create a function which answers the question "Are you playing banjo?".
 //If your name starts with the letter "R" or lower case "r", you are playing banjo!
@@ -265,6 +266,23 @@ function areYouPlayingBanjo(name) {
     }
 }
 
+//Digitize
+
 //note, in js you dont need to split string to get proper index
 //i can make it shorter by using  console.log(name[0]);
+//completed
+
+//Convert number to reversed array of digits
+//Given a random non-negative number, you have to return the digits
+// of this number within an array in reverse order.
+//Example(Input => Output):
+//35231 => [1,3,2,5,3]
+//0 => [0]
+
+function digitize(n) {
+    let str = n.toString().split("").reverse();
+    let numbs = str.map(Number);
+    return numbs
+}
+
 //completed
