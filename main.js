@@ -245,9 +245,26 @@ function race(v1, v2, g) {
 
     //unfinished - lets check it later
 
-
-
-
-
-
 }
+
+
+//Create a function which answers the question "Are you playing banjo?".
+//If your name starts with the letter "R" or lower case "r", you are playing banjo!
+//The function takes a name as its only argument, and returns one of the following strings:
+//name + " plays banjo" 
+//name + " does not play banjo"
+//Names given are always valid strings.
+
+function areYouPlayingBanjo(name) {
+
+    let splittedName = name.split("");
+    if (splittedName[0] === 'r' || splittedName[0] === 'R') {
+        return name + " plays banjo";
+    } else {
+        return name + " does not play banjo"
+    }
+}
+
+//note, in js you dont need to split string to get proper index
+//i can make it shorter by using  console.log(name[0]);
+//completed
