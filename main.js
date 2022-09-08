@@ -214,6 +214,10 @@ function race(v1, v2, g) {
         result[0] = Math.floor(time)
 
     }
+
+    if (time < 1.0) {
+        result[0] +=
+    }
     // let checkMinIsUnder60 = time - result[0];
     // result[1] = Math.floor(checkMinIsUnder60 * 60)
     console.log();
