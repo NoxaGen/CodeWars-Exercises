@@ -196,25 +196,33 @@ function solution(number) {
 //The result will be an array [hour, min, sec] which is the time needed in hours, minutes and seconds (round down to the nearest second) or a string in some languages.
 
 function race(v1, v2, g) {
-    let time;
-    let houres;
-    let minutes;
-    let seconds;
+    let time = new Date();
+    let houres = 0;
+    let minutes = 0;
+    let seconds = 0;
+    let result = [houres, minutes, seconds];
 
     if (v1 >= v2) {
         return 0;
     } else {
-        time = g / (v2 - v1);
+        time = (g / (v2 - v1));
+
     }
+    console.log(time)
 
-    if (time > 1.0)
+    if (time > 1.0) {
+        result[0] = Math.floor(time)
 
+    }
+    // let checkMinIsUnder60 = time - result[0];
+    // result[1] = Math.floor(checkMinIsUnder60 * 60)
+    console.log();
+    time - result[0];
+    console.log(time)
+    result[1] = Math.floor(time * 60);
+    result[2] = Math.floor(time * 3600);
 
-
-
-
-
-
+    console.log('result here: ' + result)
 }
 
 //areYouPlayingBanjo
