@@ -268,3 +268,12 @@ function digitize(n) {
 }
 
 //completed
+
+//Write a function which converts the input string to uppercase.
+
+function makeUpperCase(str) {
+    return str.toUpperCase()
+}
+
+//to easy...
+//completed
