@@ -196,54 +196,24 @@ function solution(number) {
 //The result will be an array [hour, min, sec] which is the time needed in hours, minutes and seconds (round down to the nearest second) or a string in some languages.
 
 function race(v1, v2, g) {
+    let time;
+    let houres;
+    let minutes;
+    let seconds;
 
-    let diffrenceG = 76; //advantage in feets from A1 to B2
-    let AAvgSpeed = 710; //speed A turtle - feet per hour
-    let BAvgSpeed = 810; //speed B turtle - feet per hour
-    let hour = 0;
-    let minute = 0;
-    let second = 0;
-
-    let keepGCalc = 0;
-
-    let finalResult = [hour, minute, second]
-
-    // 3600 seconds is 1h
-    // 60 minutes in 1h
-
-    if (AAvgSpeed >= BAvgSpeed) {
+    if (v1 >= v2) {
         return 0;
+    } else {
+        time = g / (v2 - v1);
     }
 
-    //predkosc zolwia B dzielona na 60minut daje nam ile feet robi zolw na godzine
-    let convertFeetToTimeH = BAvgSpeed / 65;
-    //wcychodzi, ze na godzine robi 13.5 przy stalych danych
-    console.log(`turtle B doing  ${convertFeetToTimeH} feets per h `);
-
-    //teraz podzielimy odlegosc od A do Z przez skonvertowany czas
-    keepGCalc = diffrenceG / convertFeetToTimeH;
-    console.log(keepGCalc.toFixed(4));
-    console.log(keepGCalc);
+    if (time > 1.0)
 
 
-    // let restFromH;
-    // let minutesFromH;
 
-    // if (convertFeetToTimeH % Math.floor(convertFeetToTimeH)) {
-    //     restFromH = convertFeetToTimeH - Math.floor(convertFeetToTimeH);
 
-    //     hour = +1;
-    // }
 
-    // if (restFromH) {
-    //     minutesFromH = Math.floor(restFromH * 60);
-    // }
 
-    // console.log(restFromH);
-    // console.log(minutesFromH);
-    // console.log(finalResult);
-
-    //unfinished - lets check it later
 
 }
 
