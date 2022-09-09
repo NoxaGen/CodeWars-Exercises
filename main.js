@@ -222,7 +222,7 @@ function race(v1, v2, g) {
 
 function race2(v1, v2, g) {
     let time = 0;
-    if (v1 >= v2 || !v1 || !v2 || (!v1 && v2)) { // for broken tests in node.js!!!
+    if (v1 >= v2 || !v1 || !v2 || (!v1 && !v2)) { // for broken tests in node.js!!!
         return 0;
     } else {
         time = (g / (v2 - v1));
@@ -347,3 +347,10 @@ function stringToArray(string) {
     return string.split(" ");
 }
 //completed, too easy
+
+//Simple multiplication
+//This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+function simpleMultiplication(number) {
+    return ((number % 2 === 0) ? number * 8 : number * 9);
+}
+//completed, easy
