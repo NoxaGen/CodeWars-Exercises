@@ -196,11 +196,10 @@ function solution(number) {
 //The result will be an array [hour, min, sec] which is the time needed in hours, minutes and seconds (round down to the nearest second) or a string in some languages.
 
 function race(v1, v2, g) {
-    let time = new Date();
-    let houres = 0;
+    let time;
+    let hours = 0;
     let minutes = 0;
     let seconds = 0;
-    let result = [houres, minutes, seconds];
 
     if (v1 >= v2) {
         return 0;
@@ -208,25 +207,26 @@ function race(v1, v2, g) {
         time = (g / (v2 - v1));
 
     }
-    console.log(time)
 
-    if (time > 1.0) {
-        result[0] = Math.floor(time)
+    hours = parseInt(time)
+    restHours = time - hours;
+    minutes = parseInt(restHours * 60);
+    // restMinutes = (restHours * 60) - minutes; //i need this rest for calc rest of seconds
+    restSeconds = restHours * 3600;
+    seconds = Math.floor(restSeconds - minutes * 60);
 
+    if (seconds === 60) {
+        seconds = 0;
+        minutes + 1;
     }
 
-    // if (time < 1.0) {
-    //     result[0] +=
-    // };
-    // let checkMinIsUnder60 = time - result[0];
-    // result[1] = Math.floor(checkMinIsUnder60 * 60)
-    console.log();
-    time - result[0];
-    console.log(time)
-    result[1] = Math.floor(time * 60);
-    result[2] = Math.floor(time * 3600);
+    if (minutes === 60) {
+        minutes = 0;
+        hours + 1;
+    }
 
-    console.log('result here: ' + result)
+    let result = [hours, minutes, seconds];
+    return result
 }
 
 //areYouPlayingBanjo
