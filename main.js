@@ -215,9 +215,9 @@ function race(v1, v2, g) {
 
     }
 
-    if (time < 1.0) {
-        result[0] +=
-    }
+    // if (time < 1.0) {
+    //     result[0] +=
+    // };
     // let checkMinIsUnder60 = time - result[0];
     // result[1] = Math.floor(checkMinIsUnder60 * 60)
     console.log();
@@ -269,6 +269,7 @@ function digitize(n) {
 
 //completed
 
+//Make Upper Case String
 //Write a function which converts the input string to uppercase.
 
 function makeUpperCase(str) {
@@ -277,3 +278,20 @@ function makeUpperCase(str) {
 
 //to easy...
 //completed
+
+//Calculate average
+
+//Write a function which calculates the average of the numbers in a given list.
+//Note: Empty arrays should return 0.
+
+function find_average(array) {
+    let sum = 0;
+    if (array.length === 0) {
+        return 0;
+    } else {
+        array.forEach(element => {
+            sum += element;
+        });
+        return (sum / array.length);
+    }
+}
