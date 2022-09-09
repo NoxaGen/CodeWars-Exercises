@@ -320,4 +320,15 @@ function greet(name, owner) {
     } else return 'Hello guest'
 }
 
-//completed, to easy
+//completed, too easy
+
+//convert sring to an array
+//Write a function to split a string and convert it into an array of words.
+//Examples (Input ==> Output):
+//"Robin Singh" ==> ["Robin", "Singh"]
+//"I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+function stringToArray(string) {
+    return string.split(" ");
+}
+//completed, too easy
