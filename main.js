@@ -354,3 +354,25 @@ function simpleMultiplication(number) {
     return ((number % 2 === 0) ? number * 8 : number * 9);
 }
 //completed, easy
+
+//Break camelCase
+//Complete the solution so that the function will break up camel casing, using a space between words.
+//"camelCasing"  =>  "camel Casing"
+//"identifier"   =>  "identifier"
+//""             =>  ""
+
+function solution(string) {
+    strArr = [...string.split('')];
+    let breakCamel = [];
+
+    strArr.forEach(letter => {
+        breakCamel.push(letter);
+        if (letter === letter.toUpperCase()) {
+            breakCamel.splice(letter.indexOf(), 0, ' ');
+        }
+    });
+    return breakCamel.join('');
+}
+
+//note, done it very quickly, im proud of myself 
+//completed
