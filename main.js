@@ -376,3 +376,38 @@ function solution(string) {
 
 //note, done it very quickly, im proud of myself 
 //completed
+
+//Simple Pig Latin
+
+//Move the first letter of each word to the end of it, then add "ay" to the end of the word. 
+//Leave punctuation marks untouched.
+//Examples
+//pigIt('Pig latin is cool'); --> igPay atinlay siay oolcay
+//pigIt('Hello world !');     --> elloHay orldway !
+
+function pigIt(str) {
+    let getSentences = [...str.split(" ")]
+    let keepLetters = [];
+    let newSentences = [];
+    getSentences.forEach(sentence => {
+        keepLetters.push(sentence[sentence.length - 1]);
+        // getSentences.slice(sentence[sentence.length - 1], 1)
+        newSentences.push(sentence.slice(0, -1))
+    });
+
+    newSentences.forEach(word => {
+        console.log('foreach ' + word[0])
+        word[0] + keepLetters[word]
+    });
+    // getSentences.forEach(sentence => {
+
+    //     newSentences.push(sentence.slice(0, -1))
+
+
+    // })
+
+    // console.log(keepLetters);
+    console.log('get sentences: ' + getSentences);
+    console.log('keep letters: ' + keepLetters);
+    console.log('new sentences: ' + newSentences);
+}
