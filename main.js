@@ -389,25 +389,24 @@ function pigIt(str) {
     let getSentences = [...str.split(" ")]
     let keepLetters = [];
     let newSentences = [];
+    let concatTest = [];
     getSentences.forEach(sentence => {
+        let counter = 0;
+        counter++;
         keepLetters.push(sentence[sentence.length - 1]);
-        // getSentences.slice(sentence[sentence.length - 1], 1)
-        newSentences.push(sentence.slice(0, -1))
+        newSentences.push(sentence.slice(0, sentence.length - 1));
+        // console.log(newSentences[0][counter]);
+        // newSentences.splice([counter][counter], 0, keepLetters[counter]);
+        // concatTest = keepLetters.concat(newSentences);
     });
+    concatTest = [(keepLetters[0] + )]
+    console.log(keepLetters)
+    console.log(newSentences)
+    console.log(concatTest)
+}
 
-    newSentences.forEach(word => {
-        console.log('foreach ' + word[0])
-        word[0] + keepLetters[word]
-    });
-    // getSentences.forEach(sentence => {
+function pigIt2(str) {
+    let getSentences = [...str.split(" ")]
 
-    //     newSentences.push(sentence.slice(0, -1))
-
-
-    // })
-
-    // console.log(keepLetters);
-    console.log('get sentences: ' + getSentences);
-    console.log('keep letters: ' + keepLetters);
-    console.log('new sentences: ' + newSentences);
+    console.log(getSentences[0][1])
 }
