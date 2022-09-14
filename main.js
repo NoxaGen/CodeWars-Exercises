@@ -407,39 +407,18 @@ function pigIt(str) {
 
 function pigIt2(str) {
     let getSentences = [...str.split(" ")]
-    let arr = [];
-    let arr2 = [];
-    let arr3 = [];
-
-    // for(let i = 0; i >= getSentences.)
+    let getFirstLetter = [];
+    let restOfSentence = [];
+    let mergeAll = [];
 
     getSentences.forEach(sentence => {
-        // console.log([...sentence].splice(0, 1, getSentences.length - 1));
-        // [...sentence].splice(1, 1);
-        arr.push(sentence[0]);
-        // let spread = sentence.split("");
-
-        arr2.push(sentence.substring(sentence.length, 1));
-
-        arr3 = arr2.concat(arr)
-
-
-
-        // spread.forEach(element => {
-        //     console.log(element.substring(0, 1))
-
-        // });
-
-
-
+        getFirstLetter.push(sentence[0]); //get first letter of each sentence
+        restOfSentence.push(sentence.substring(sentence.length, 1)); // get rest of sentence  
     });
 
-    // console.log(arr)
-    console.log(arr)
-    console.log(arr2)
-    console.log(arr3)
+    for (let i = 0; i < getSentences.length; i++) {
+        mergeAll.push(restOfSentence[i] + getFirstLetter[i] + 'ay')
+    }
 
-
-
-
+    return mergeAll.join(' ');
 }
