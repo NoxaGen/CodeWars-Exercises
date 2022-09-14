@@ -410,6 +410,7 @@ function pigIt2(str) {
     let getFirstLetter = [];
     let restOfSentence = [];
     let mergeAll = [];
+    let ayAddCheck = [];
 
     getSentences.forEach(sentence => {
         getFirstLetter.push(sentence[0]); //get first letter of each sentence
@@ -417,8 +418,16 @@ function pigIt2(str) {
     });
 
     for (let i = 0; i < getSentences.length; i++) {
-        mergeAll.push(restOfSentence[i] + getFirstLetter[i] + 'ay')
+        mergeAll.push(restOfSentence[i] + getFirstLetter[i])
     }
 
-    return mergeAll.join(' ');
+    mergeAll.forEach(sentence => {
+        if (sentence[0] !== '!' || sentence[0] !== '?') {
+            ayAddCheck.push(sentence + 'ay')
+        } else {
+            ayAddCheck.push(sentence)
+        }
+    });
+
+    return ayAddCheck.join(' ');
 }
