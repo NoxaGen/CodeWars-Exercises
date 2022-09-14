@@ -422,12 +422,14 @@ function pigIt2(str) {
     }
 
     mergeAll.forEach(sentence => {
-        if (sentence[0] !== '!' || sentence[0] !== '?') {
-            ayAddCheck.push(sentence + 'ay')
+        if (sentence[0] === '!' || sentence[0] === '?') {
+            ayAddCheck.push(sentence);
         } else {
-            ayAddCheck.push(sentence)
+            ayAddCheck.push(sentence + 'ay');
         }
     });
 
     return ayAddCheck.join(' ');
 }
+
+//completed, but have some issues.
