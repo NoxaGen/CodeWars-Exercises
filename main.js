@@ -433,3 +433,10 @@ function pigIt2(str) {
 }
 
 //completed, but have some issues.
+
+//some quick and easy exerices over here, because i need to clean my codewars list todo
+//We need a function that can transform a number (integer) into a string.
+
+function numberToString(num) {
+    return num.toString();
+}
