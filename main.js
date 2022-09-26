@@ -441,7 +441,6 @@ function numberToString(num) {
     return num.toString();
 }
 
-
 //last exercise got issie, i remove it
 //i had 1.5 week break bacuse of my mothers heart issues in cracow
 //get some more exercies for busy my head
@@ -455,3 +454,20 @@ function findSmallestInt(...args) {
     return smallestNumb = Math.min(...args);
 }
 //completed, note: very easy but i need to do all 
+
+//friend or foe?
+//Make a program that filters a list of strings and returns a list with only your friends name in it.
+//If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+//Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+function friend(friends) {
+    let trueFriends = [];
+    friends.forEach(friend => {
+        if (friend.length === 4) {
+            trueFriends.push(friend);
+        }
+    });
+    return trueFriends
+}
+
+//completed
