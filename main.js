@@ -445,3 +445,13 @@ function numberToString(num) {
 //last exercise got issie, i remove it
 //i had 1.5 week break bacuse of my mothers heart issues in cracow
 //get some more exercies for busy my head
+
+//Smallest Intiger
+// Given an array of integers your solution should find the smallest integer.
+// For example:
+// Given [34, 15, 88, 2] your solution will return 2
+
+function findSmallestInt(...args) {
+    return smallestNumb = Math.min(...args);
+}
+//completed, note: very easy but i need to do all 
