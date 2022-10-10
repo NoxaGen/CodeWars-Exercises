@@ -500,3 +500,35 @@ function basicOp(operation, value1, value2) {
 }
 
 //completed, note: very easy and can be done with switch-statment too
+
+//i have some health issues and im returning to the living...
+//lets try some easy exercises after break
+
+//Sentence Smash
+//Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. 
+//You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, 
+//there shouldn't be a space at the beginning or the end of the sentence!
+
+function smash(words) {
+    console.log(words[0][0])
+    let mergeSentence = [];
+    if (words.length === 1) {
+        console.log('sentence have 1 lenght')
+        if (words[0][0] === ' ') {
+            console.log('im trying todo slice)
+                let fixWord = words.slice(words[0], 1);
+                return fixWord
+            }
+            return words
+        } else if (words.length <= 0) {
+            return ""
+        } else if (words.length > 1) {
+            const arr = [...words];
+            arr.forEach(element => {
+                mergeSentence += element + ' '
+            });
+
+            let final = mergeSentence.slice(mergeSentence[mergeSentence.length], -1)
+            return final
+        }
+    };
