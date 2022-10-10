@@ -510,25 +510,25 @@ function basicOp(operation, value1, value2) {
 //there shouldn't be a space at the beginning or the end of the sentence!
 
 function smash(words) {
-    console.log(words[0][0])
+    console.log(words[0][1])
     let mergeSentence = [];
     if (words.length === 1) {
         console.log('sentence have 1 lenght')
         if (words[0][0] === ' ') {
-            console.log('im trying todo slice)
-                let fixWord = words.slice(words[0], 1);
-                return fixWord
-            }
-            return words
-        } else if (words.length <= 0) {
-            return ""
-        } else if (words.length > 1) {
-            const arr = [...words];
-            arr.forEach(element => {
-                mergeSentence += element + ' '
-            });
-
-            let final = mergeSentence.slice(mergeSentence[mergeSentence.length], -1)
-            return final
+            console.log('im trying to do slice');
+            let fixWord = words.slice(words[0][0], 1);
+            return fixWord
         }
-    };
+        return words
+    } else if (words.length <= 0) {
+        return ""
+    } else if (words.length > 1) {
+        const arr = [...words];
+        arr.forEach(element => {
+            mergeSentence += element + ' '
+        });
+
+        let final = mergeSentence.slice(mergeSentence[mergeSentence.length], -1)
+        return final
+    }
+};
