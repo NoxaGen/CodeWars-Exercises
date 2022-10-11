@@ -536,30 +536,26 @@ function smash(words) {
 };
 
 function smash2([...words]) {
-    //if its empty, return ""
     let fixWord;
+    let mergeSentence = [];
     if (!words.length) {
         return "";
-        //else check there is 1 element
+
     } else if (words.length === 1) {
         if (words[0][0] === ' ') {
-
-            console.log('my first letter is space, im deleting it')
             fixWord = words[0].replace(' ', '');
-            // console.log('now the word lookings like that:' + fixWord)
-            // console.log('last letter of the fixWord is:' + fixWord[fixWord.length - 1])
-            console.log(fixWord)
         }
+        if (fixWord[fixWord.length - 1] === ' ') {
+            let lastWordFix = fixWord.replace(' ', '');
+            return lastWordFix;
+
+        }
+    } else if (words.length > 1) {
+        const arr = [...words];
+        arr.forEach(element => {
+            mergeSentence += element + ' '
+        });
+        let final = mergeSentence.slice(mergeSentence[mergeSentence.length], -1)
+        return final
     }
-
-    console.log(fixWord[fixWord.length - 1] + '<-')
-
-
-    if (fixWord[fixWord.length - 1] === ' ') {
-        let lastWordFix = fixWord.replace(' ', '');
-        console.log('last letter is space, im deleting it')
-        console.log(lastWordFix)
-    }
-
-
 }
