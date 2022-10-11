@@ -510,17 +510,14 @@ function basicOp(operation, value1, value2) {
 //there shouldn't be a space at the beginning or the end of the sentence!
 
 function smash(words) {
-    console.log(words[0][0])
+    let fixWord;
     let mergeSentence = [];
     if (words.length === 1) {
         console.log('sentence have 1 lenght')
         if (words[0][0] === ' ') {
-            console.log('im trying to do slice');
-            console.log(words[0][0])
-            console.log(words[0][words.length])
-            let fixWord = words.slice(words[0][1], words[0][words.length]);
-            console.log(words.slice(words[0][1], words[0][words.length]))
-            console.log(`console fixWord: ${fixWord}`);
+            let word = words;
+            fixWord = word.replace(' ', '');
+            console.log(fixWord)
             return fixWord
         }
         return words
@@ -537,3 +534,32 @@ function smash(words) {
         return final
     }
 };
+
+function smash2([...words]) {
+    //if its empty, return ""
+    let fixWord;
+    if (!words.length) {
+        return "";
+        //else check there is 1 element
+    } else if (words.length === 1) {
+        if (words[0][0] === ' ') {
+
+            console.log('my first letter is space, im deleting it')
+            fixWord = words[0].replace(' ', '');
+            // console.log('now the word lookings like that:' + fixWord)
+            // console.log('last letter of the fixWord is:' + fixWord[fixWord.length - 1])
+            console.log(fixWord)
+        }
+    }
+
+    console.log(fixWord[fixWord.length - 1] + '<-')
+
+
+    if (fixWord[fixWord.length - 1] === ' ') {
+        let lastWordFix = fixWord.replace(' ', '');
+        console.log('last letter is space, im deleting it')
+        console.log(lastWordFix)
+    }
+
+
+}
