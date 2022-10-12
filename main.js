@@ -589,3 +589,16 @@ function smash3([...words]) {
 
     }
 }
+
+function smash4(words) {
+    if (!words.length) {
+        console.log('there is empty array')
+        return "";
+    } else if (words.length === 1) {
+        if (words[0][0] !== ' ' || words[0][words.length - 1] !== ' ') {
+            return words;
+        } else {
+            console.log('i found some spaces in word')
+        }
+    }
+}
