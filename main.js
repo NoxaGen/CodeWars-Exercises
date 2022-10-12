@@ -559,3 +559,33 @@ function smash2([...words]) {
         return final
     }
 }
+
+function smash3([...words]) {
+    let fixWord;
+    console.log(words.length)
+    console.log(words[0][words.length - 1])
+    if (!words.length) {
+        console.log('there is empty array')
+        return "";
+    } else if (words.length === 1) {
+        console.log('there is only 1 index in array, im checking spaces and returning it');
+        if (words[0][0] === ' ' || words[0][words.length - 1] === ' ') {
+            console.log('i found spaces in single word, i removes them')
+            fixWord = words[0].replace(' ', '');
+            console.log(fixWord)
+            if (fixWord[fixWord.length - 1] === ' ') {
+                console.log(fixWord[fixWord.length - 1]);
+                let lastWordFix = fixWord.replace(' ', '');
+                console.log('im here 333')
+                return lastWordFix;
+            } else {
+                console.log('im here 444')
+                return fixWord
+            }
+        } else {
+            console.log('im here 555')
+            return words
+        }
+
+    }
+}
