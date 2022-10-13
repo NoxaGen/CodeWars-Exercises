@@ -590,13 +590,24 @@ function smash3([...words]) {
     }
 }
 
-function smash4([words]) {
-    wordKeeper = [];
+function smash4([...words]) {
 
-
-    if (!words) {
+    let firstCheck;
+    let secondCheck;
+    if (!words.length) {
         return "";
-    } else if (words && words[0][0] !== ' ' && words[0][words.length - 1] !== ' ') {
-        return words;
+    } else if (words && words.length === 1) {
+        if (words[0][0] === ' ' || words[0][words.length - 1] === ' ') {
+
+            if (words[0][0] === ' ') {
+                console.log('1st sign space');
+                firstCheck = words[0].replace(' ', '');
+            }
+            if (firstCheck[firstCheck.length - 1] === ' ') {
+                console.log('last sign have space');
+            }
+        }
+        return words
     }
+
 }
