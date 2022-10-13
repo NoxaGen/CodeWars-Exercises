@@ -611,3 +611,26 @@ function smash4([...words]) {
     }
 
 }
+
+function smash5([...words]) {
+
+    let firstCheck;
+    let secondCheck;
+    if (!words.length) {
+        return "";
+    } else if (words.length === 1) {
+        console.log(words)
+        console.log(words[0])
+        console.log(words[0][0])
+        // console.log(words[0][words.length - 1])
+        console.log(words[0].length - 1)
+
+        if (words[0][0] === ' ') {
+            console.log('1st letter is space')
+        }
+        if (words[0][words[0].length - 1] === ' ') {
+            console.log('last letter is space')
+        }
+    }
+
+}
