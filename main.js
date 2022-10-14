@@ -621,7 +621,7 @@ function smash5([...words]) {
     } else if (words.length === 1) {
 
 
-        if (words[0][0] === ' ') {
+        if (words[0][0] === ' ' || words[0][words[0].length - 1]) {
             console.log('1st letter is space')
             firstCheck = words[0].replace(' ', '');
             if (firstCheck[firstCheck.length - 1] === ' ') {
@@ -632,9 +632,31 @@ function smash5([...words]) {
     }
 
 }
-
 // below is the my small/big mistake about this exercises, i write incorrect iterator [words[0].lenght-1]
 
 // if (words[0][words[0].length - 1] === ' ') {
 //     console.log('last letter is space')
 // }
+
+// I FIND OUT THERE IS A TRIM METHOD!!!!!!!!!!!!!!!!!!
+
+function smash6([...words]) {
+    let trimWord;
+    let mergeSentence = [];
+    if (!words.length) {
+        return "";
+    } else if (words.length === 1) {
+        trimWord = words[0];
+        return trimWord.trim()
+    } else if (words.length > 1) {
+        const arr = [...words];
+        arr.forEach(element => {
+            mergeSentence += element + ' '
+        });
+        let final = mergeSentence.slice(mergeSentence[mergeSentence.length], -1)
+        return final
+    }
+}
+
+// i spend over 2 days trying to solve this, i learn about iterators and meet trim()lol (:
+//completed
