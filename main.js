@@ -660,3 +660,14 @@ function smash6([...words]) {
 
 // i spend over 2 days trying to solve this, i learn about iterators and meet trim()lol (:
 //completed
+
+// i want to do all exercises from codeWars so some random of them might look like this one below...
+
+//Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+//[Make sure you type the exact thing I wrote or the program may not execute properly]
+
+function greet(name) {
+    return `Hello, ${name} how are you doing today?`;
+}
+
+//completed, 2 easy :P
