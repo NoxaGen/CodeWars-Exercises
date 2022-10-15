@@ -661,13 +661,19 @@ function smash6([...words]) {
 // i spend over 2 days trying to solve this, i learn about iterators and meet trim()lol (:
 //completed
 
-// i want to do all exercises from codeWars so some random of them might look like this one below...
+//Count the number of divisors of a positive integer n.
+//example: 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30) etc.
 
-//Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
-//[Make sure you type the exact thing I wrote or the program may not execute properly]
+function getDivisorsCnt(n) {
+    let arrDivisors = [];
 
-function greet(name) {
-    return `Hello, ${name} how are you doing today?`;
+    for (let i = 0; i <= n; i++) {
+        if (n % i === 0) {
+            // arrDivisors.push(i)
+            return i
+        }
+    }
+    return arrDivisors;
+
 }
-
-//completed, 2 easy :P
+//completed, modulo rox
