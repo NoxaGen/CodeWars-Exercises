@@ -683,7 +683,7 @@ function getDivisorsCnt(n) {
 
 //test in node.js are only for HEY JUDE, so i wont use my whole alphabet to not wasting time
 
-decodeMorse = function (morseCode) {
+function decodeMorse(morseCode) {
     const h = '....';
     const e = '.';
     const y = '-.--';
@@ -691,5 +691,9 @@ decodeMorse = function (morseCode) {
     const u = '..-';
     const d = '-..';
 
+    console.log(typeof morseCode)
+
+    let test = morseCode.split(' ');
+    console.log(test)
 
 }
