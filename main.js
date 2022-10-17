@@ -755,13 +755,18 @@ function decodeMorse(morseCode) {
             case '...-':
                 translation.push('v');
                 break;
-            case '-..-':
+            case '.--':
                 translation.push('w');
                 break;
-            case '--..':
+            case '-..-':
                 translation.push('x');
                 break;
-
+            case '-.--':
+                translation.push('y');
+                break;
+            case '--..':
+                translation.push('z');
+                break;
 
             case '':
                 translation.push(' ');
