@@ -687,6 +687,12 @@ function getDivisorsCnt(n) {
 function decodeMorse(morseCode) {
     let translation = [];
     let test = morseCode.split(' ');
+
+    test.forEach(word => {
+        console.log(word.trim())
+    });
+
+
     for (let i = 0; i <= test.length; i++) {
         switch (test[i]) {
             case '.-':
@@ -767,11 +773,14 @@ function decodeMorse(morseCode) {
             case '--..':
                 translation.push('z');
                 break;
-
             case '':
                 translation.push(' ');
                 break;
         }
     }
-    return translation.join('').toUpperCase().replace('  ', ' ');
+
+    console.log(translation)
+
+
+    // return translation.join('').toUpperCase().replace('  ', ' ');
 }
