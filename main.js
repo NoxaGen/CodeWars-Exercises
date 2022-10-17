@@ -687,12 +687,6 @@ function getDivisorsCnt(n) {
 function decodeMorse(morseCode) {
     let translation = [];
     let test = morseCode.split(' ');
-
-    test.forEach(word => {
-        console.log(word.trim())
-    });
-
-
     for (let i = 0; i <= test.length; i++) {
         switch (test[i]) {
             case '.-':
@@ -778,9 +772,7 @@ function decodeMorse(morseCode) {
                 break;
         }
     }
-
-    console.log(translation)
-
-
-    // return translation.join('').toUpperCase().replace('  ', ' ');
+    return translation.join('').toUpperCase().replace('  ', ' ').trim();
 }
+
+//completed, all working - but the tests in node are broken on codewars, so i dodnt get the points...
