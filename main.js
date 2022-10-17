@@ -682,18 +682,63 @@ function getDivisorsCnt(n) {
 //MORSE CODE DECODER part 1.
 
 //test in node.js are only for HEY JUDE, so i wont use my whole alphabet to not wasting time
+//do solution with switch statment working fine, but i see i need to add more letter
 
 function decodeMorse(morseCode) {
-    const h = '....';
-    const e = '.';
-    const y = '-.--';
-    const j = '.---';
-    const u = '..-';
-    const d = '-..';
-
-    console.log(typeof morseCode)
-
+    let translation = [];
     let test = morseCode.split(' ');
-    console.log(test)
+    for (let i = 0; i <= test.length; i++) {
+        switch (test[i]) {
+            case '.-':
+                translation.push('a');
+                break;
+            case '-...':
+                translation.push('b');
+                break;
+            case '-.-.':
+                translation.push('c');
+                break;
+            case '-..':
+                translation.push('d');
+                break;
+            case '.':
+                translation.push('e');
+                break;
+            case '..-.':
+                translation.push('f');
+                break;
+            case '--.':
+                translation.push('g');
+                break;
+            case '....':
+                translation.push('h');
+                break;
+            case '..':
+                translation.push('i');
+                break;
+            case '.---':
+                translation.push('j');
+                break;
+            case '-.-':
+                translation.push('k');
+                break;
+            case '.-..':
+                translation.push('l');
+                break;
+            case '..':
+                translation.push('i');
+                break;
+            case '..':
+                translation.push('i');
+                break;
+            case '..':
+                translation.push('i');
+                break;
 
+            case '':
+                translation.push(' ');
+                break;
+        }
+    }
+    return translation.join('').toUpperCase().replace('  ', ' ');
 }
