@@ -725,15 +725,43 @@ function decodeMorse(morseCode) {
             case '.-..':
                 translation.push('l');
                 break;
-            case '..':
-                translation.push('i');
+            case '--':
+                translation.push('m');
                 break;
-            case '..':
-                translation.push('i');
+            case '-.':
+                translation.push('n');
                 break;
-            case '..':
-                translation.push('i');
+            case '---':
+                translation.push('o');
                 break;
+            case '.--.':
+                translation.push('p');
+                break;
+            case '--.-':
+                translation.push('q');
+                break;
+            case '.-.':
+                translation.push('r');
+                break;
+            case '...':
+                translation.push('s');
+                break;
+            case '-':
+                translation.push('t');
+                break;
+            case '..-':
+                translation.push('u');
+                break;
+            case '...-':
+                translation.push('v');
+                break;
+            case '-..-':
+                translation.push('w');
+                break;
+            case '--..':
+                translation.push('x');
+                break;
+
 
             case '':
                 translation.push(' ');
