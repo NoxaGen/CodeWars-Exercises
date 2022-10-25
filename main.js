@@ -839,3 +839,17 @@ function removeSmallest2(numbers) {
     });
     console.log(`${dirtyArr} <- dirty | clean -> ${cleanArr}`)
 }
+
+function removeSmallest3(numbers) {
+    let checkSmallestNumb = Math.min(...numbers);
+    let index = numbers.findIndex(numb => numb === checkSmallestNumb);
+    console.log(index, typeof index)
+    let fixedReviews = numbers.splice(numbers)
+
+    console.log(toString(numbers[index + 2]));
+
+
+
+    console.log(tryString)
+
+}
