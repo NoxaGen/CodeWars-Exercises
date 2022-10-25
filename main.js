@@ -821,5 +821,21 @@ function removeSmallest(numbers) {
         }
     });
     console.log(testArr)
+}
 
+function removeSmallest2(numbers) {
+    let dirtyArr = [];
+    let cleanArr = [];
+    let checkSmallestNumb = Math.min(...numbers);
+
+    numbers.forEach(numb => {
+        if (numb === checkSmallestNumb) {
+            dirtyArr.push(numb)
+        }
+
+        if (numb !== checkSmallestNumb) {
+            cleanArr.push(numb)
+        }
+    });
+    console.log(`${dirtyArr} <- dirty | clean -> ${cleanArr}`)
 }
