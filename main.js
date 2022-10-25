@@ -796,3 +796,30 @@ function likes(names) {
 }
 
 //completed on the first run all tests :) pretty easy for 6kyu
+
+//The museum of incredible dull things 
+//--> https://www.codewars.com/kata/563cf89eb4747c5fb100001b/train/javascript
+//the point is to remove the lowest number for architect to improve avrage rating of exhibitions withotu destroying org arr.
+
+
+function removeSmallest(numbers) {
+    let testArr = [];
+    let checkSmallestNumb = Math.min(...numbers);
+    let fixedArr = numbers.find(numb => numb === checkSmallestNumb);
+    let flag = false;
+
+    numbers.forEach(numb => {
+        if (numb !== checkSmallestNumb) {
+            if (flag) {
+                return
+            }
+            testArr.push(numb)
+
+        }
+        if (numb === checkSmallestNumb) {
+            flag = true;
+        }
+    });
+    console.log(testArr)
+
+}
