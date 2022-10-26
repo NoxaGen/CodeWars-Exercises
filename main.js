@@ -860,3 +860,16 @@ function removeSmallest3(numbers) {
     // fixedReviews = stringConvertArr.replace(index.valueOf(), '')
     // console.log(numbers)
 }
+
+function removeSmallest4(numbers) {
+    let checkSmallestNumb = Math.min(...numbers);
+    let index = numbers.findIndex(numb => numb === checkSmallestNumb);
+    let copyNumbers = [];
+
+    numbers.forEach(numb => {
+        copyNumbers.push(numb)
+    });
+
+    copyNumbers.splice(index, 1);
+    return copyNumbers;
+}
