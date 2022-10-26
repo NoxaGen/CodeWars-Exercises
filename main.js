@@ -843,13 +843,20 @@ function removeSmallest2(numbers) {
 function removeSmallest3(numbers) {
     let checkSmallestNumb = Math.min(...numbers);
     let index = numbers.findIndex(numb => numb === checkSmallestNumb);
-    console.log(index, typeof index)
-    let fixedReviews = numbers.splice(numbers)
 
-    console.log(toString(numbers[index + 2]));
+    console.log(numbers)
 
+    let copyArr = numbers;
+    copyArr.splice(index, 1);
 
+    console.log(checkSmallestNumb + ' <- smallest numb')
+    console.log(index + ' <- index of smallest numb')
+    console.log(copyArr + ' <- copied array')
+    console.log(numbers + ' <- org arr')
 
-    console.log(tryString)
-
+    // numbers.forEach(numb => {
+    //     stringConvertArr.push(numb.toString());
+    // });
+    // fixedReviews = stringConvertArr.replace(index.valueOf(), '')
+    // console.log(numbers)
 }
