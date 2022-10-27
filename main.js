@@ -873,3 +873,18 @@ function removeSmallest4(numbers) {
     copyNumbers.splice(index, 1);
     return copyNumbers;
 }
+
+//list filtering - i think to easy task but lets go
+//In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+function filter_list(l) {
+    let filterArr = [];
+    l.forEach(ls => {
+        if (typeof ls !== 'string') {
+            filterArr.push(ls);
+        }
+    });
+    return filterArr
+}
+
+//completed
