@@ -903,6 +903,9 @@ function parse(data) {
     let outputValue = 0;
     let resultArr = [counter];
 
+    let splitter = data.split(' ');
+    console.log(splitter);
+
     data.forEach(element => {
         if (isNaN(element) && (element === 'i' || element === 'd' || element === 's' || element === 'o')) {
             cleaningArr.push(element)
@@ -930,3 +933,33 @@ function parse(data) {
     return resultArr;
 
 }
+
+//new code, i missunderstood the input value, there is only one string not an arr.
+
+function parse2(data) {
+    let splitter = data.split('');
+    let counter = 0;
+    let outputValue = 0;
+    let resultArr = [];
+
+    splitter.forEach(element => {
+        switch (element) {
+            case 'i':
+                counter = counter + 1;
+                break;
+            case 'd':
+                counter = counter - 1;
+                break;
+            case 's':
+                counter = counter * counter;
+                break;
+            case 'o':
+                resultArr.push(counter)
+                outputValue = counter;
+                break;
+        }
+    });
+    return resultArr;
+}
+
+//completed parse function
