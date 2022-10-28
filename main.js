@@ -888,3 +888,45 @@ function filter_list(l) {
 }
 
 //completed
+
+//Make the Deadfish Swim
+//Write a simple parser that will parse and run Deadfish.//Deadfish has 4 commands, each 1 character long:
+//i increments the value (initially 0)
+//d decrements the value
+//s squares the value
+//o outputs the value into the return array
+//Invalid characters should be ignored.
+
+function parse(data) {
+    let cleaningArr = [];
+    let counter = 0;
+    let outputValue = 0;
+    let resultArr = [counter];
+
+    data.forEach(element => {
+        if (isNaN(element) && (element === 'i' || element === 'd' || element === 's' || element === 'o')) {
+            cleaningArr.push(element)
+        }
+    });
+
+    cleaningArr.forEach(data => {
+        switch (data) {
+            case 'i':
+                counter++;
+                break;
+            case 'd':
+                counter--;
+                break;
+            case 's':
+                counter * counter;
+                break;
+            case 'o':
+                resultArr.push(counter)
+                outputValue = counter;
+                break;
+        }
+    });
+
+    return resultArr;
+
+}
