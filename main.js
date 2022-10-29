@@ -963,3 +963,57 @@ function parse2(data) {
 }
 
 //completed parse function
+
+//Count the smiley faces:
+//Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+//https://www.codewars.com/kata/583203e6eb35d7980400002a/train/javascript
+//Valid smiley face examples: :) :D ;-D :~)
+//Invalid smiley faces: ;( :> :} :]
+
+function countSmileys(arr) {
+    let counter = 0;
+
+    arr.forEach(face => {
+        switch (face) {
+            case ':)':
+                counter++;
+                break;
+            case ':D':
+                counter++;
+                break;
+            case ';D':
+                counter++;
+                break;
+            case ';-D':
+                counter++;
+                break;
+            case ':~)':
+                counter++;
+                break;
+            case ':-)':
+                counter++;
+                break;
+            case ';-)':
+                counter++;
+                break;
+            case ';)':
+                counter++;
+                break;
+            case ':-D':
+                counter++;
+                break;
+            case ':~D':
+                counter++;
+                break;
+            case ';~D':
+                counter++;
+                break;
+            case ';~)':
+                counter++;
+                break;
+        }
+    });
+    return counter
+}
+
+//completed, to easy and to annoying for lvl 6 kata imo
