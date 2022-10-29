@@ -1017,3 +1017,47 @@ function countSmileys(arr) {
 }
 
 //completed, to easy and to annoying for lvl 6 kata imo
+
+//IP Validation
+//Write an algorithm that will identify valid IPv4 addresses in dot-decimal format. IPs should be considered valid if they consist of four octets, 
+//with values between 0 and 255, inclusive.
+
+function isValidIP(str) {
+    let splitter = str.split('.');
+    let checkIsNan = [];
+    let
+
+    if (splitter.length > 4) {
+        return false;
+
+    } else if (splitter.length < 4) {
+        return false;
+    }
+
+    // splitter.forEach(element => {
+    //     if (element > 255) {
+    //         return false;
+    //     }
+    // });
+
+    splitter.forEach(element => {
+
+        console.log(element + 0)
+
+    });
+
+    let arrX = [1, 2, 3, 4, 5, 6, 7, 8]
+    let arrY = [7, 10, 11];
+
+    for (let i = 0; i <= arrX.length; i++) {
+        if (arrY[i].includes(arrX[i])) {
+            console.log('im here')
+        }
+    }
+
+
+
+
+    console.log(checkIsNan)
+    console.log(splitter)
+}
