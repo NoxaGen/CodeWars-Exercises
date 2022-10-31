@@ -1024,8 +1024,17 @@ function countSmileys(arr) {
 
 function isValidIP(str) {
     let splitter = str.split('.');
+
+
+    let findNaNs = [];
+
+    splitter.forEach(data => {
+        findNaNs.push(data.split(''))
+    });
+
+    console.log(findNaNs);
     let checkIsNan = [];
-    let
+
 
     if (splitter.length > 4) {
         return false;
@@ -1040,24 +1049,81 @@ function isValidIP(str) {
     //     }
     // });
 
-    splitter.forEach(element => {
+    // splitter.forEach(element => {
 
-        console.log(element + 0)
+    //     console.log(element + 0)
+
+    // });
+
+    // let arrX = [1, 2, 3, 4, 5, 6, 7, 8]
+    // let arrY = [7, 10, 11];
+
+    // for (let i = 0; i <= arrX.length; i++) {
+    //     if (arrY[i].includes(arrX[i])) {
+    //         console.log('im here')
+    //     }
+    // }
+
+    // console.log(checkIsNan)
+    console.log(splitter)
+}
+
+function isValidIP2(str) {
+    let splitter = str.split('.');
+    let findNaNs = [];
+    let ipChars = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'];
+    let forbiddenChars = ['/']
+
+    splitter.forEach(data => {
+        findNaNs.push(data.split(''))
+    });
+
+    console.log(`splitter   `)
+    console.log(splitter)
+
+    console.log(`find nans`);
+    console.log(findNaNs)
+
+    findNaNs.forEach(char => {
+
+        if (char.includes(ipChars[char])) {
+            console.log('keke')
+        }
+
 
     });
 
-    let arrX = [1, 2, 3, 4, 5, 6, 7, 8]
-    let arrY = [7, 10, 11];
 
-    for (let i = 0; i <= arrX.length; i++) {
-        if (arrY[i].includes(arrX[i])) {
-            console.log('im here')
+
+
+
+
+
+
+}
+
+function isValidIP3(str) {
+    const ArrOfNaNs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let checker = str.split('');
+    let keeper = false;
+
+    checker.forEach(char => {
+        if (ArrOfNaNs.includes(char)) {
+            console.log(char)
+            keeper = true;
+
+
         }
+    });
+
+    if (keeper === true) {
+        return
     }
 
 
+    let splitter = str.split('.');
 
-
-    console.log(checkIsNan)
     console.log(splitter)
+
+
 }
