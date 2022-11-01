@@ -1105,25 +1105,37 @@ function isValidIP2(str) {
 function isValidIP3(str) {
     const ArrOfNaNs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     let checker = str.split('');
-    let keeper = false;
+    let splitter = str.split('.');
+    let keeper = false; //if keeper true - shut down program
+    let getNums = [];
 
+    //check forbidden signs
     checker.forEach(char => {
         if (ArrOfNaNs.includes(char)) {
             console.log(char)
             keeper = true;
-
-
         }
     });
 
-    if (keeper === true) {
-        return
+    //check leading zeros
+    splitter.forEach(element => {
+        if (element[0] === '0') {
+            keeper = true;
+        }
+        getNums.push(parseInt(element));
+    });
+
+    //check numbers value
+    getNums.forEach(number => {
+        if (number > 255 || isNaN(number)) {
+            keeper = true;
+        }
+    })
+
+    //check keeper status and is there are four octets
+    if ((keeper === true) || getNums.length !== 4) {
+        return false;
+    } else if (!keeper) {
+        return true;
     }
-
-
-    let splitter = str.split('.');
-
-    console.log(splitter)
-
-
 }
