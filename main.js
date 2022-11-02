@@ -1103,39 +1103,45 @@ function isValidIP2(str) {
 }
 
 function isValidIP3(str) {
-    const ArrOfNaNs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    const charactersAllowed = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'];
     let checker = str.split('');
     let splitter = str.split('.');
-    let keeper = false; //if keeper true - shut down program
+    let keeper = false; //if keeper true = validation error
     let getNums = [];
 
-    //check forbidden signs
+    //checks whitespaces
+    if (str[0] === ' ' || str[str.length - 1] === ' ') {
+        keeper = true;
+    }
+
+    //checks forbidden signs
     checker.forEach(char => {
-        if (ArrOfNaNs.includes(char)) {
-            console.log(char)
+        if (!charactersAllowed.includes(char)) {
             keeper = true;
         }
     });
 
-    //check leading zeros
+    //checks leading zeros
     splitter.forEach(element => {
-        if (element[0] === '0') {
+        if (element[0] === '0' && element.length > 1) {
             keeper = true;
         }
         getNums.push(parseInt(element));
     });
 
-    //check numbers value
+    //checks numbers value
     getNums.forEach(number => {
         if (number > 255 || isNaN(number)) {
             keeper = true;
         }
     })
 
-    //check keeper status and is there are four octets
+    //format validation
     if ((keeper === true) || getNums.length !== 4) {
         return false;
     } else if (!keeper) {
         return true;
     }
 }
+
+//completed, im very satisfied :)
