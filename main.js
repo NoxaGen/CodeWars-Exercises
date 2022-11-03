@@ -1145,3 +1145,44 @@ function isValidIP3(str) {
 }
 
 //completed, im very satisfied :)
+// I got feedback, the name of variables are awful and i can make this function a lot better.
+
+
+//to camel case function
+//Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only 
+//if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+
+function toCamelCase(str) {
+    let dash = '-';
+    let underscore = '_';
+    let splitSentence = [];
+    let camelCase = [];
+
+    if (str.includes(dash)) {
+        splitSentence = str.split('-');
+    } else if (str.includes(underscore)) {
+        splitSentence = str.split('_');
+    } else {
+        return str
+    }
+
+    splitSentence.forEach(sentence => {
+        s
+        camelCase.push(sentence.charAt(0).toUpperCase());
+        camelCase.push(sentence.slice(1, sentence.length));
+    });
+
+    camelCase.join('');
+    let firstLetter;
+
+    if (str[0] === str[0].toUpperCase()) {
+        firstLetter = String(camelCase.slice(0, 1)).toUpperCase();
+    } else {
+        firstLetter = String(camelCase.slice(0, 1)).toLowerCase();
+    }
+
+    let restOfSentence = camelCase.slice(1, camelCase.length);
+    return (firstLetter + restOfSentence.join(''));
+}
+
+//completed, tests in node are little broken, so i must improvide with another if-statment
