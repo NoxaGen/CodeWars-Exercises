@@ -1186,3 +1186,12 @@ function toCamelCase(str) {
 }
 
 //completed, tests in node are little broken, so i must improvide with another if-statment
+
+function createPhoneNumber(numbers) {
+    let countryCode = ['(', numbers[0], numbers[1], numbers[2], ')', ' '].join('');
+    let restOfNumber = [numbers[3], numbers[4], numbers[5], '-', numbers[6], numbers[7], numbers[8], numbers[9]].join('');
+    let phoneNumberForm = countryCode.concat(restOfNumber);
+    return phoneNumberForm;
+}
+
+//completed, pretty easy.
