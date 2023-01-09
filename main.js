@@ -1195,3 +1195,71 @@ function createPhoneNumber(numbers) {
 }
 
 //completed, pretty easy.
+
+// back after 1 month break, have some health issues - now i'am ready to rock
+
+//Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive.
+// The string can contain any char.
+
+function XO(str) {
+    const strArr = [...str.split('')];
+    let xArr = [];
+    let oArr = [];
+    strArr.forEach(element => {
+        if (element === 'x' || element === 'X') {
+            xArr.push(element)
+        } else if (element === 'o' || element === 'O') {
+            oArr.push(element)
+        }
+    });
+
+    if (xArr.length === oArr.length) {
+        return true
+    } else {
+        return false
+    }
+}
+
+//completed, nice easy task to remove some rust
+
+//Highest Scoring Word
+//Given a string of words, you need to find the highest scoring word.Each letter of a word scores points according to its position 
+//in the alphabet: a = 1, b = 2, c = 3 etc.
+//For example, the score of abad is 8 (1 + 2 + 1 + 4). You need to return the highest scoring word as a string.
+//If two words score the same, return the word that appears earliest in the original string. All letters will be lowercase and all inputs will be valid.
+
+function high(x) {
+
+    let spreadSentence = [x.split(' ')];
+
+
+    console.log(spreadSentence)
+
+    const a = 1;
+    const b = 2;
+    const c = 3;
+    const d = 4;
+    const e = 5;
+    const f = 6;
+    const g = 7;
+    const h = 8;
+    const i = 9;
+    const j = 10;
+    const k = 11;
+    const l = 12;
+    const m = 13;
+    const n = 14;
+    const o = 15;
+    const p = 16;
+    const q = 17;
+    const r = 18;
+    const s = 19;
+    const t = 20;
+    const u = 21;
+    const v = 22;
+    const w = 23;
+    // const x = 24;
+    const y = 25;
+    const z = 26;
+
+}
