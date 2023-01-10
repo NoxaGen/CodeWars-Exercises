@@ -1242,17 +1242,109 @@ function high(x) {
     let score = checkLetters.length;
     let startCounter = 0;
 
-    console.log(score);
-    console.log(checkLetters.length);
-    console.log(score);
-    console.log(spreadSentence)
-    console.log(checkLetters)
-    console.log(alphabetWithStrings.includes(checkLetters[0][3]));
-    console.log((checkLetters[1][3]));
+    // console.log(score);
+    // console.log(checkLetters.length);
+    // console.log(score);
+    // console.log(spreadSentence)
+    // console.log(checkLetters)
+    // console.log(alphabetWithStrings.includes(checkLetters[0][3]));
+    // console.log((checkLetters[1][3]));
 
-    alphabetWithStrings.forEach(letter => {
+    let letterScore = 0;
 
-        if (checkLetters[startCounter][])
+    checkLetters.forEach(array => {
+
+        console.log(array)
+
+        array.forEach(letter => {
+            letterScore = 0;
+            switch (letter) {
+
+                case 'a':
+                    letterScore = letterScore + 1;
+                    break;
+                case 'b':
+                    letterScore = letterScore + 2;
+                    break;
+                case 'c':
+                    letterScore = letterScore + 3;
+                    break;
+                case 'd':
+                    letterScore = letterScore + 4;
+                    break;
+                case 'e':
+                    letterScore = letterScore + 5;
+                    break;
+                case 'f':
+                    letterScore = letterScore + 6;
+                    break;
+                case 'g':
+                    letterScore = letterScore + 7;
+                    break;
+                case 'h':
+                    letterScore = letterScore + 8;
+                    break;
+                case 'i':
+                    letterScore = letterScore + 9;
+                    break;
+                case 'j':
+                    letterScore = letterScore + 10;
+                    break;
+                case 'k':
+                    letterScore = letterScore + 11;
+                    break;
+                case 'l':
+                    letterScore = letterScore + 12;
+                    break;
+                case 'm':
+                    letterScore = letterScore + 13;
+                    break;
+                case 'n':
+                    letterScore = letterScore + 14;
+                    break;
+                case 'o':
+                    letterScore = letterScore + 15;
+                    break;
+                case 'p':
+                    letterScore = letterScore + 16;
+                    break;
+                case 'q':
+                    letterScore = letterScore + 17;
+                    break;
+                case 'r':
+                    letterScore = letterScore + 18;
+                    break;
+                case 's':
+                    letterScore = letterScore + 19;
+                    break;
+                case 't':
+                    letterScore = letterScore + 20;
+                    break;
+                case 'u':
+                    letterScore = letterScore + 21;
+                    break;
+                case 'v':
+                    letterScore = letterScore + 22;
+                    break;
+                case 'w':
+                    letterScore = letterScore + 23;
+                    break;
+                case 'x':
+                    letterScore = letterScore + 24;
+                    break;
+                case 'y':
+                    letterScore = letterScore + 25;
+                    break;
+                case 'z':
+                    letterScore = letterScore + 26;
+                    break;
+                default:
+                    break;
+            }
+
+        });
+
+
 
 
     });
