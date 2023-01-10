@@ -1230,36 +1230,27 @@ function XO(str) {
 
 function high(x) {
 
-    let spreadSentence = [x.split(' ')];
+    let spreadSentence = [...x.split(' ')];
+    let checkLettersValue = [];
+
+    spreadSentence.forEach(sentence => {
+        checkLettersValue.push(sentence.split(''))
+    });
+
+    checkLettersValue.forEach(letter => {
+        console.log(letter)
+    });
 
 
     console.log(spreadSentence)
 
-    const a = 1;
-    const b = 2;
-    const c = 3;
-    const d = 4;
-    const e = 5;
-    const f = 6;
-    const g = 7;
-    const h = 8;
-    const i = 9;
-    const j = 10;
-    const k = 11;
-    const l = 12;
-    const m = 13;
-    const n = 14;
-    const o = 15;
-    const p = 16;
-    const q = 17;
-    const r = 18;
-    const s = 19;
-    const t = 20;
-    const u = 21;
-    const v = 22;
-    const w = 23;
-    // const x = 24;
-    const y = 25;
-    const z = 26;
+    console.log(checkLettersValue)
+
+    const arr = [a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, h = 8, i = 9, j = 10, k = 11, l = 12, m = 13, n = 14, o = 15, p = 16, q = 17, r = 18, s = 19, t = 20, u = 21, v = 22, w = 23, x = 24, y = 25, z = 26];
+    console.log(arr[0].valueOf())
+    console.log(arr[5].valueOf())
+
+
+    console.log(a.valueOf())
 
 }
