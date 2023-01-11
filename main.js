@@ -1336,21 +1336,3 @@ function high(x) {
 
     return spreadSentence[index];
 }
-
-function test() {
-    let x = 'z';
-    let z = ['a', 'z'];
-
-    console.log(z.includes(x));
-}
-
-function high2(x) {
-    let cuttedSentence = [...x.split(' ')];
-    let scoreBoard = [];
-    let score = 0;
-
-    cuttedSentence.forEach(sentence => {
-
-    });
-
-}
