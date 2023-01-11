@@ -1231,28 +1231,18 @@ function XO(str) {
 function high(x) {
 
     let spreadSentence = [...x.split(' ')];
+    let letterScore = 0;
     let checkLetters = [];
-    const alphabetWithNumberValues = [a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, h = 8, i = 9, j = 10, k = 11, l = 12, m = 13, n = 14, o = 15, p = 16, q = 17, r = 18, s = 19, t = 20, u = 21, v = 22, w = 23, x = 24, y = 25, z = 26];
-    const alphabetWithStrings = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    let scoreBoard = [];
 
     spreadSentence.forEach(sentence => {
         checkLetters.push(sentence.split(''))
     });
 
-    let score = checkLetters.length;
-    let startCounter = 0;
-
-    let letterScore = 0;
-    let scoreBoard = [];
-
     checkLetters.forEach(array => {
-
-        console.log(array)
-
         array.forEach(letter => {
-            letterScore = 0;
-            switch (letter) {
 
+            switch (letter) {
                 case 'a':
                     letterScore = letterScore + 1;
                     break;
@@ -1337,23 +1327,14 @@ function high(x) {
 
         });
         scoreBoard.push(letterScore);
-
-        // console.log(scoreBoard)
-        // console.log(scoreBoard.length)
-        // console.log(spreadSentence.length)
-        // console.log(Math.max(...scoreBoard))
-
-
+        letterScore = 0;
     });
 
+    console.log(scoreBoard)
+    let highestScoreWord = Math.max(...scoreBoard);
+    let index = scoreBoard.findIndex(result => result === highestScoreWord);
 
-
-
-
-
-
-
-
+    return spreadSentence[index];
 }
 
 function test() {
