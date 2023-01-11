@@ -1242,15 +1242,8 @@ function high(x) {
     let score = checkLetters.length;
     let startCounter = 0;
 
-    // console.log(score);
-    // console.log(checkLetters.length);
-    // console.log(score);
-    // console.log(spreadSentence)
-    // console.log(checkLetters)
-    // console.log(alphabetWithStrings.includes(checkLetters[0][3]));
-    // console.log((checkLetters[1][3]));
-
     let letterScore = 0;
+    let scoreBoard = [];
 
     checkLetters.forEach(array => {
 
@@ -1343,8 +1336,12 @@ function high(x) {
             }
 
         });
+        scoreBoard.push(letterScore);
 
-
+        // console.log(scoreBoard)
+        // console.log(scoreBoard.length)
+        // console.log(spreadSentence.length)
+        // console.log(Math.max(...scoreBoard))
 
 
     });
@@ -1364,4 +1361,15 @@ function test() {
     let z = ['a', 'z'];
 
     console.log(z.includes(x));
+}
+
+function high2(x) {
+    let cuttedSentence = [...x.split(' ')];
+    let scoreBoard = [];
+    let score = 0;
+
+    cuttedSentence.forEach(sentence => {
+
+    });
+
 }
