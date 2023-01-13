@@ -1324,7 +1324,6 @@ function high(x) {
                 default:
                     break;
             }
-
         });
         scoreBoard.push(letterScore);
         letterScore = 0;
@@ -1335,4 +1334,24 @@ function high(x) {
     let index = scoreBoard.findIndex(result => result === highestScoreWord);
 
     return spreadSentence[index];
+}
+
+//Count characters in your string
+//The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+//What if the string is empty? Then the result should be empty object literal, {}.
+
+function count(string) {
+    let splitString = string.split('');
+    const albatros = [{}];
+
+    splitString.forEach(letter => {
+        albatros.assign({}, letter.valueOf(), {
+
+        });
+    });
+
+    console.log(albatros);
+
+    //I WILL BACK TO THIS AFTER I STUDY SOME OOP
+    //https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/javascript
 }
